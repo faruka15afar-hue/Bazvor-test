@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  >
+
+  <title>Bazvor — Shop</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
+  <!-- HOME CSS -->
+  <link rel="stylesheet" href="home.css">
+
+  <!-- SHARED NAVIGATION CSS -->
+  <link rel="stylesheet" href="bottom-nav.css">
+
+</head>
+
+
+<body>
+
+<div class="bazvor-app">
+
+
+  <!-- =====================================================
+       SHARED BACKGROUND
+  ====================================================== -->
+
+  <div
+    class="home-background-system"
+    id="homeBackgroundSystem"
+    aria-hidden="true"
+  >
+
+    <div
+      class="home-background-layer background-layer-a"
+      id="backgroundLayerA"
+    ></div>
+
+    <div
+      class="home-background-layer background-layer-b"
+      id="backgroundLayerB"
+    ></div>
+
+  </div>
+
+
+  <!-- =====================================================
+       TOP AREA
+  ====================================================== -->
+
+  <div class="home-top-area">
+
+
+    <!-- ===================================================
+         HEADER
+    ==================================================== -->
+
+    <header class="main-header">
+
+      <div class="header-search-wrap">
+
+        <div class="search-box">
+
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+
+          <input
+            type="search"
+            id="searchInput"
+            placeholder="Search products, brands and more..."
+            autocomplete="off"
+          >
+
+          <button
+            class="camera-button"
+            id="cameraButton"
+            type="button"
+            aria-label="Visual Search"
+          >
+
+            <i class="fa-solid fa-camera"></i>
+
+          </button>
+
+        </div>
+
+
+        <div
+          class="search-results"
+          id="searchResults"
+        ></div>
+
+      </div>
+
+
+      <!-- TOP CATEGORIES -->
+
+      <nav class="top-category-nav">
+
+        <div
+          class="top-category-scroll"
+          id="topCategoryScroll"
+        >
+
+          <button
+            class="top-category active"
+            data-category="All"
+            type="button"
+          >
+            All
+          </button>
+
+          <button
+            class="top-category"
+            data-category="Men"
+            type="button"
+          >
+            Men
+          </button>
+
+          <button
+            class="top-category"
+            data-category="Women"
+            type="button"
+          >
+            Women
+          </button>
+
+          <button
+            class="top-category"
+            data-category="Phones"
+            type="button"
+          >
+            Phones
+          </button>
+
+          <button
+            class="top-category"
+            data-category="Watches"
+            type="button"
+          >
+            Watches
+          </button>
+
+          <button
+            class="top-category"
+            data-category="Groceries"
+            type="button"
+          >
+            Groceries
+          </button>
+
+          <button
+            class="top-category"
+            data-category="Beauty"
+            type="button"
+          >
+            Beauty
+          </button>
+
+          <button
+            class="top-category"
+            data-category="Home"
+            type="button"
+          >
+            Home
+          </button>
+
+          <button
+            class="top-category"
+            data-category="Sports"
+            type="button"
+          >
+            Sports
+          </button>
+
+          <button
+            class="top-category"
+            data-category="Agriculture"
+            type="button"
+          >
+            Agriculture
+          </button>
+
+          <button
+            class="top-category"
+            data-category="Automotive"
+            type="button"
+          >
+            Automotive
+          </button>
+
+          <button
+            class="top-category"
+            data-category="Kids"
+            type="button"
+          >
+            Kids
+          </button>
+
+        </div>
+
+      </nav>
+
+    </header>
+
+
+    <!-- ===================================================
+         MAIN
+    ==================================================== -->
+
+    <main class="main-content">
+
+
+      <!-- =================================================
+           HERO
+      ================================================== -->
+
+      <section class="promo-section">
+
+        <div
+          class="promo-slider"
+          id="promoSlider"
+        ></div>
+
+      </section>
+
+
+      <!-- =================================================
+           LARGE QUICK ACTION CARDS
+      ================================================== -->
+
+      <section class="quick-actions-section">
+
+        <div
+          class="quick-actions-scroll"
+          id="homeQuickActions"
+        >
+
+          <div
+            class="quick-card-loading"
+            id="quickCardLoading"
+          >
+
+            <div class="quick-card-spinner"></div>
+
+            <span>
+              Loading...
+            </span>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =================================================
+           MINI DISCOVERY
+      ================================================== -->
+
+      <section class="mini-discovery-section">
+
+        <div
+          class="mini-discovery-scroll"
+          id="miniDiscoveryScroll"
+        >
+
+          <div
+            class="mini-discovery-loading"
+            id="miniDiscoveryLoading"
+          >
+
+            <div class="mini-discovery-spinner"></div>
+
+            <span>
+              Loading...
+            </span>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =================================================
+           FLASH SELL
+      ================================================== -->
+
+      <section
+        class="flash-sale-section"
+        style="
+          width:100%;
+          background:#7b155f !important;
+          padding:14px 10px 13px !important;
+          margin:0 !important;
+          box-sizing:border-box !important;
+          overflow:hidden !important;
+          color:#fff !important;
+        "
+      >
+
+        <!-- HEADER -->
+
+        <div
+          class="flash-header"
+          style="
+            width:100%;
+            height:38px !important;
+            display:flex !important;
+            align-items:center !important;
+            justify-content:space-between !important;
+            margin:0 0 12px !important;
+            padding:0 !important;
+            box-sizing:border-box !important;
+          "
+        >
+
+          <div
+            class="flash-title"
+            style="
+              height:38px !important;
+              display:flex !important;
+              align-items:center !important;
+              gap:7px !important;
+              margin:0 !important;
+              padding:0 !important;
+              box-sizing:border-box !important;
+            "
+          >
+
+            <span
+              class="flash-bolt"
+              style="
+                width:30px !important;
+                height:30px !important;
+                min-width:30px !important;
+                display:flex !important;
+                align-items:center !important;
+                justify-content:center !important;
+                background:#fff !important;
+                color:#7b155f !important;
+                border-radius:5px !important;
+                font-size:14px !important;
+                box-sizing:border-box !important;
+              "
+            >
+              <i class="fa-solid fa-bolt"></i>
+            </span>
+
+            <h2
+              style="
+                margin:0 !important;
+                padding:0 !important;
+                color:#fff !important;
+                font-size:17px !important;
+                line-height:1 !important;
+                font-weight:800 !important;
+                white-space:nowrap !important;
+                box-sizing:border-box !important;
+              "
+            >
+              Flash Sell
+            </h2>
+
+          </div>
+
+
+          <!-- TIMER -->
+
+          <div
+            class="flash-countdown"
+            style="
+              height:38px !important;
+              display:flex !important;
+              align-items:center !important;
+              gap:4px !important;
+              margin:0 !important;
+              padding:0 !important;
+              box-sizing:border-box !important;
+            "
+          >
+
+            <div
+              class="flash-time-box"
+              style="
+                width:34px !important;
+                height:38px !important;
+                background:#fff !important;
+                border-radius:5px !important;
+                display:flex !important;
+                flex-direction:column !important;
+                align-items:center !important;
+                justify-content:center !important;
+                box-sizing:border-box !important;
+              "
+            >
+
+              <span
+                id="flashHours"
+                style="
+                  color:#7b155f !important;
+                  font-size:14px !important;
+                  font-weight:800 !important;
+                  line-height:15px !important;
+                "
+              >08</span>
+
+              <small
+                style="
+                  color:#7b155f !important;
+                  font-size:7px !important;
+                  font-weight:700 !important;
+                  line-height:8px !important;
+                "
+              >H</small>
+
+            </div>
+
+
+            <b
+              style="
+                color:#fff !important;
+                font-size:14px !important;
+                font-weight:800 !important;
+                line-height:1 !important;
+              "
+            >:</b>
+
+
+            <div
+              class="flash-time-box"
+              style="
+                width:34px !important;
+                height:38px !important;
+                background:#fff !important;
+                border-radius:5px !important;
+                display:flex !important;
+                flex-direction:column !important;
+                align-items:center !important;
+                justify-content:center !important;
+                box-sizing:border-box !important;
+              "
+            >
+
+              <span
+                id="flashMinutes"
+                style="
+                  color:#7b155f !important;
+                  font-size:14px !important;
+                  font-weight:800 !important;
+                  line-height:15px !important;
+                "
+              >00</span>
+
+              <small
+                style="
+                  color:#7b155f !important;
+                  font-size:7px !important;
+                  font-weight:700 !important;
+                  line-height:8px !important;
+                "
+              >M</small>
+
+            </div>
+
+
+            <b
+              style="
+                color:#fff !important;
+                font-size:14px !important;
+                font-weight:800 !important;
+                line-height:1 !important;
+              "
+            >:</b>
+
+
+            <div
+              class="flash-time-box"
+              style="
+                width:34px !important;
+                height:38px !important;
+                background:#fff !important;
+                border-radius:5px !important;
+                display:flex !important;
+                flex-direction:column !important;
+                align-items:center !important;
+                justify-content:center !important;
+                box-sizing:border-box !important;
+              "
+            >
+
+              <span
+                id="flashSeconds"
+                style="
+                  color:#7b155f !important;
+                  font-size:14px !important;
+                  font-weight:800 !important;
+                  line-height:15px !important;
+                "
+              >00</span>
+
+              <small
+                style="
+                  color:#7b155f !important;
+                  font-size:7px !important;
+                  font-weight:700 !important;
+                  line-height:8px !important;
+                "
+              >S</small>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- FLASH PRODUCTS -->
+
+        <div
+          class="flash-product-scroll flash-loading"
+          id="flashProducts"
+          style="
+            width:100%;
+            display:flex !important;
+            flex-direction:row !important;
+            gap:9px !important;
+            overflow-x:auto !important;
+            overflow-y:hidden !important;
+            padding:0 1px 7px !important;
+            margin:0 !important;
+            box-sizing:border-box !important;
+            scrollbar-width:none !important;
+            -webkit-overflow-scrolling:touch !important;
+          "
+        ></div>
+
+
+        <!-- SEE ALL -->
+
+        <div
+          class="flash-see-all-wrap"
+          style="
+            width:100%;
+            display:flex !important;
+            align-items:center !important;
+            justify-content:center !important;
+            margin:6px 0 0 !important;
+            padding:0 !important;
+          "
+        >
+
+          <button
+            class="flash-see-all"
+            id="flashSeeAll"
+            type="button"
+            style="
+              width:105px !important;
+              height:32px !important;
+              display:flex !important;
+              align-items:center !important;
+              justify-content:center !important;
+              gap:6px !important;
+              background:#fff !important;
+              color:#7b155f !important;
+              border:0 !important;
+              border-radius:4px !important;
+              font-size:12px !important;
+              font-weight:800 !important;
+              padding:0 !important;
+              margin:0 !important;
+              box-sizing:border-box !important;
+            "
+          >
+
+            <span>
+              See All
+            </span>
+
+            <i class="fa-solid fa-chevron-right"></i>
+
+          </button>
+
+        </div>
+
+      </section>
+
+
+      <!-- =================================================
+           RECOMMENDED
+      ================================================== -->
+
+      <section class="all-products-section content-section">
+
+        <div class="section-header">
+
+          <div>
+
+            <span class="section-mini-title">
+              Discover
+            </span>
+
+            <h2>
+              Recommended For You
+            </h2>
+
+          </div>
+
+        </div>
+
+
+        <div
+          class="product-grid product-loading"
+          id="productGrid"
+        ></div>
+
+
+        <button
+          class="load-more-button"
+          id="loadMoreProducts"
+          type="button"
+        >
+
+          Load More Products
+
+          <i class="fa-solid fa-chevron-down"></i>
+
+        </button>
+
+      </section>
+
+    </main>
+
+  </div>
+
+
+</div>
+
+
+<!-- =====================================================
+     HOME LOGIC
+====================================================== -->
+
+<script
+  type="module"
+  src="home.js"
+></script>
+
+
+<!-- =====================================================
+     SHARED BOTTOM NAVIGATION
+====================================================== -->
+
+<script
+  src="bottom-nav.js"
+></script>
+
+</body>
+
+</html>

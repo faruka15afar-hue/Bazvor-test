@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  >
+
+  <title>Bazvor — Account</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
+  <link rel="stylesheet" href="account.css">
+  <link rel="stylesheet" href="bottom-nav.css">
+</head>
+
+<body>
+
+<div class="account-app">
+
+  <!-- =====================================================
+       HEADER
+  ====================================================== -->
+
+  <header class="account-header">
+
+    <div class="header-profile-wrap">
+
+      <button
+        class="header-profile"
+        id="headerProfile"
+        type="button"
+        aria-label="Open profile"
+        aria-expanded="false"
+      >
+
+        <span class="header-avatar">
+
+          <span id="profileInitial">
+            <i class="fa-regular fa-user"></i>
+          </span>
+
+          <img
+            id="profileImage"
+            src=""
+            alt="Profile"
+            hidden
+          >
+
+        </span>
+
+
+        <span class="header-profile-copy">
+
+          <strong id="headerProfileName">
+            Account
+          </strong>
+
+          <small id="headerProfileSub">
+            View your profile
+          </small>
+
+        </span>
+
+
+        <i
+          class="fa-solid fa-chevron-down header-chevron"
+        ></i>
+
+      </button>
+
+
+      <!-- PROFILE DROPDOWN -->
+
+      <div
+        class="profile-dropdown"
+        id="profileDropdown"
+        hidden
+      >
+
+        <!-- LOGGED IN -->
+
+        <div
+          class="dropdown-user"
+          id="loggedInProfile"
+          hidden
+        >
+
+          <div class="dropdown-user-header">
+
+            <div
+              class="dropdown-avatar"
+              id="dropdownAvatar"
+            >
+              B
+            </div>
+
+
+            <div class="dropdown-user-info">
+
+              <div class="dropdown-name">
+
+                <strong id="profileName">
+                  Bazvor User
+                </strong>
+
+                <i
+                  class="fa-solid fa-certificate verified-badge"
+                  title="Verified"
+                ></i>
+
+              </div>
+
+
+              <p>
+                <i class="fa-solid fa-phone"></i>
+
+                <span id="profilePhone">
+                  Add mobile number
+                </span>
+              </p>
+
+
+              <p>
+                <i class="fa-regular fa-envelope"></i>
+
+                <span id="profileEmail">
+                  user@example.com
+                </span>
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <button
+            type="button"
+            class="edit-profile-btn"
+            id="editProfileBtn"
+          >
+            <i class="fa-solid fa-pen"></i>
+            Edit Profile
+          </button>
+
+        </div>
+
+
+        <!-- GUEST -->
+
+        <div
+          class="dropdown-guest"
+          id="guestProfile"
+        >
+
+          <div class="guest-profile-icon">
+            <i class="fa-regular fa-user"></i>
+          </div>
+
+
+          <strong>
+            Welcome to Bazvor
+          </strong>
+
+
+          <p>
+            Login to manage your orders, wishlist and account.
+          </p>
+
+
+          <button
+            type="button"
+            class="login-profile-btn"
+            id="loginProfileBtn"
+          >
+            <i class="fa-solid fa-arrow-right-to-bracket"></i>
+            Login / Sign Up
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <button
+      type="button"
+      class="header-settings"
+      id="headerSettings"
+      aria-label="Settings"
+    >
+      <i class="fa-solid fa-gear"></i>
+    </button>
+
+  </header>
+
+
+
+  <!-- =====================================================
+       MAIN
+  ====================================================== -->
+
+  <main class="account-main">
+
+
+    <!-- ===================================================
+         QUICK OPTIONS
+         4 + 4 = 8
+    ==================================================== -->
+
+    <section
+      class="quick-stats"
+      aria-label="Account shortcuts"
+    >
+
+      <!-- ORDERS -->
+
+      <button
+        type="button"
+        class="stat-card"
+        data-protected-link="orders.html"
+      >
+
+        <span class="stat-icon orders-icon">
+          <i class="fa-solid fa-box-open"></i>
+        </span>
+
+        <strong>Orders</strong>
+
+        <small id="ordersCount">
+          0
+        </small>
+
+      </button>
+
+
+      <!-- WISHLIST -->
+
+      <button
+        type="button"
+        class="stat-card"
+        data-protected-link="wishlist.html"
+      >
+
+        <span class="stat-icon wishlist-icon">
+          <i class="fa-regular fa-heart"></i>
+        </span>
+
+        <strong>Wishlist</strong>
+
+        <small id="wishlistCount">
+          0
+        </small>
+
+      </button>
+
+
+      <!-- REVIEWS -->
+
+      <button
+        type="button"
+        class="stat-card"
+        data-protected-link="reviews.html"
+      >
+
+        <span class="stat-icon reviews-icon">
+          <i class="fa-regular fa-star"></i>
+        </span>
+
+        <strong>Reviews</strong>
+
+        <small id="reviewsCount">
+          0
+        </small>
+
+      </button>
+
+
+      <!-- COUPONS -->
+
+      <button
+        type="button"
+        class="stat-card"
+        data-protected-link="coupons.html"
+      >
+
+        <span class="stat-icon coupons-icon">
+          <i class="fa-solid fa-ticket"></i>
+        </span>
+
+        <strong>Coupons</strong>
+
+        <small id="couponsCount">
+          0
+        </small>
+
+      </button>
+
+
+      <!-- TRACK -->
+
+      <button
+        type="button"
+        class="stat-card track-stat"
+        id="trackOrder"
+      >
+
+        <span class="stat-icon track-icon">
+          <i class="fa-solid fa-truck-fast"></i>
+        </span>
+
+        <strong>Track Order</strong>
+
+        <small>
+          Live
+        </small>
+
+      </button>
+
+
+      <!-- ADDRESS -->
+
+      <button
+        type="button"
+        class="stat-card"
+        data-protected-link="addresses.html"
+      >
+
+        <span class="stat-icon address-icon">
+          <i class="fa-solid fa-location-dot"></i>
+        </span>
+
+        <strong>Address</strong>
+
+        <small>
+          Saved
+        </small>
+
+      </button>
+
+
+      <!-- PAYMENT -->
+
+      <button
+        type="button"
+        class="stat-card"
+        data-protected-link="payment-methods.html"
+      >
+
+        <span class="stat-icon payment-icon">
+          <i class="fa-regular fa-credit-card"></i>
+        </span>
+
+        <strong>Payment</strong>
+
+        <small>
+          Methods
+        </small>
+
+      </button>
+
+
+      <!-- SUPPORT -->
+
+      <button
+        type="button"
+        class="stat-card"
+        data-link="help.html"
+      >
+
+        <span class="stat-icon support-icon">
+          <i class="fa-solid fa-headset"></i>
+        </span>
+
+        <strong>Support</strong>
+
+        <small>
+          Help
+        </small>
+
+      </button>
+
+    </section>
+
+
+
+    <!-- ===================================================
+         ACCOUNT MENU
+    ==================================================== -->
+
+    <section class="menu-section">
+
+      <div class="section-heading">
+
+        <div>
+          <small>YOUR ACCOUNT</small>
+          <h2>Account Menu</h2>
+        </div>
+
+      </div>
+
+
+      <div class="menu-card">
+
+
+        <!-- ORDERS -->
+
+        <button
+          class="menu-item"
+          type="button"
+          data-protected-link="orders.html"
+        >
+
+          <span class="menu-icon menu-orders">
+            <i class="fa-solid fa-bag-shopping"></i>
+          </span>
+
+
+          <span class="menu-content">
+
+            <strong>
+              My Orders
+            </strong>
+
+            <small>
+              Order history, status & details
+            </small>
+
+          </span>
+
+
+          <span class="menu-arrow">
+            <i class="fa-solid fa-chevron-right"></i>
+          </span>
+
+        </button>
+
+
+
+        <!-- ADDRESS -->
+
+        <button
+          class="menu-item"
+          type="button"
+          data-protected-link="addresses.html"
+        >
+
+          <span class="menu-icon menu-address">
+            <i class="fa-solid fa-location-dot"></i>
+          </span>
+
+
+          <span class="menu-content">
+
+            <strong>
+              Saved Addresses
+            </strong>
+
+            <small>
+              Manage your delivery addresses
+            </small>
+
+          </span>
+
+
+          <span class="menu-arrow">
+            <i class="fa-solid fa-chevron-right"></i>
+          </span>
+
+        </button>
+
+
+
+        <!-- PAYMENT -->
+
+        <button
+          class="menu-item"
+          type="button"
+          data-protected-link="payment-methods.html"
+        >
+
+          <span class="menu-icon menu-payment">
+            <i class="fa-solid fa-credit-card"></i>
+          </span>
+
+
+          <span class="menu-content">
+
+            <strong>
+              Payment Methods
+            </strong>
+
+            <small>
+              Cards, mobile banking & more
+            </small>
+
+          </span>
+
+
+          <span class="menu-arrow">
+            <i class="fa-solid fa-chevron-right"></i>
+          </span>
+
+        </button>
+
+
+
+        <!-- NOTIFICATIONS -->
+
+        <button
+          class="menu-item"
+          type="button"
+          data-protected-link="notifications.html"
+        >
+
+          <span class="menu-icon menu-notification">
+            <i class="fa-regular fa-bell"></i>
+          </span>
+
+
+          <span class="menu-content">
+
+            <strong>
+              Notifications
+            </strong>
+
+            <small>
+              Order updates, offers & alerts
+            </small>
+
+          </span>
+
+
+          <span class="menu-arrow">
+            <i class="fa-solid fa-chevron-right"></i>
+          </span>
+
+        </button>
+
+
+
+        <!-- PRIVACY -->
+
+        <button
+          class="menu-item"
+          type="button"
+          data-protected-link="privacy.html"
+        >
+
+          <span class="menu-icon menu-security">
+            <i class="fa-solid fa-shield-halved"></i>
+          </span>
+
+
+          <span class="menu-content">
+
+            <strong>
+              Privacy & Security
+            </strong>
+
+            <small>
+              Password and account security
+            </small>
+
+          </span>
+
+
+          <span class="menu-arrow">
+            <i class="fa-solid fa-chevron-right"></i>
+          </span>
+
+        </button>
+
+
+
+        <!-- SUPPORT -->
+
+        <button
+          class="menu-item"
+          type="button"
+          data-link="help.html"
+        >
+
+          <span class="menu-icon menu-support">
+            <i class="fa-solid fa-headset"></i>
+          </span>
+
+
+          <span class="menu-content">
+
+            <strong>
+              Help & Support
+            </strong>
+
+            <small>
+              FAQs, support and contact
+            </small>
+
+          </span>
+
+
+          <span class="menu-arrow">
+            <i class="fa-solid fa-chevron-right"></i>
+          </span>
+
+        </button>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ===================================================
+         SELLER
+    ==================================================== -->
+
+    <button
+      class="seller-card"
+      id="sellerButton"
+      type="button"
+    >
+
+      <span class="seller-icon">
+        <i class="fa-solid fa-store"></i>
+      </span>
+
+
+      <span class="seller-content">
+
+        <strong>
+          Become a Seller
+        </strong>
+
+        <small>
+          Grow your business with BAZVOR
+        </small>
+
+      </span>
+
+
+      <span class="seller-art">
+        <i class="fa-solid fa-shop"></i>
+      </span>
+
+
+      <span class="seller-arrow">
+        <i class="fa-solid fa-chevron-right"></i>
+      </span>
+
+    </button>
+
+
+
+    <!-- ===================================================
+         LOGIN / LOGOUT
+    ==================================================== -->
+
+    <button
+      class="account-action-button"
+      id="accountActionButton"
+      type="button"
+    >
+
+      <span class="action-icon">
+
+        <i
+          class="fa-solid fa-arrow-right-to-bracket"
+          id="accountActionIcon"
+        ></i>
+
+      </span>
+
+
+      <span id="accountActionText">
+        Login / Sign Up
+      </span>
+
+
+      <i
+        class="fa-solid fa-chevron-right action-arrow"
+      ></i>
+
+    </button>
+
+
+    <p class="bazvor-footer">
+      BAZVOR
+    </p>
+
+  </main>
+
+</div>
+
+
+<script
+  type="module"
+  src="account.js"
+></script>
+
+<script src="bottom-nav.js"></script>
+
+</body>
+</html>

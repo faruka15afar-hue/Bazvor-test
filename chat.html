@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  >
+
+  <meta name="theme-color" content="#e5006d">
+
+  <title>Bazvor — Chat</title>
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
+  <link rel="stylesheet" href="chat.css">
+
+</head>
+
+
+<body>
+
+<div class="chat-app">
+
+  <header class="chat-header">
+
+    <button
+      class="chat-back"
+      id="chatBack"
+      type="button"
+      aria-label="Back"
+    >
+      <i class="fa-solid fa-arrow-left"></i>
+    </button>
+
+
+    <div class="chat-user">
+
+      <div
+        class="chat-avatar"
+        id="chatAvatar"
+      >
+        B
+      </div>
+
+      <div class="chat-identity">
+
+        <div class="chat-name-row">
+
+          <h1 id="chatName">
+            Loading...
+          </h1>
+
+          <i
+            class="fa-solid fa-circle-check chat-verified"
+            id="chatVerified"
+            hidden
+          ></i>
+
+        </div>
+
+        <p id="chatStatus">
+          Bazvor conversation
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <button
+      class="chat-action"
+      id="chatInfoButton"
+      type="button"
+      aria-label="Conversation information"
+    >
+      <i class="fa-solid fa-circle-info"></i>
+    </button>
+
+  </header>
+
+
+  <main
+    class="messages-area"
+    id="messagesArea"
+  >
+
+    <div
+      class="chat-loading"
+      id="chatLoading"
+    >
+      <div class="chat-spinner"></div>
+      <p>Loading conversation...</p>
+    </div>
+
+
+    <div
+      class="chat-error"
+      id="chatError"
+      hidden
+    >
+      <i class="fa-solid fa-triangle-exclamation"></i>
+
+      <h2>Unable to open chat</h2>
+
+      <p id="chatErrorText">
+        Please try again.
+      </p>
+    </div>
+
+
+    <div
+      class="message-list"
+      id="messageList"
+      hidden
+    ></div>
+
+  </main>
+
+
+  <form
+    class="composer"
+    id="messageForm"
+  >
+
+    <button
+      class="attach-button"
+      id="attachButton"
+      type="button"
+      aria-label="Attach"
+    >
+      <i class="fa-solid fa-plus"></i>
+    </button>
+
+
+    <div class="composer-input">
+
+      <textarea
+        id="messageInput"
+        rows="1"
+        maxlength="2000"
+        placeholder="Type a message..."
+        aria-label="Message"
+      ></textarea>
+
+    </div>
+
+
+    <button
+      class="send-button"
+      id="sendButton"
+      type="submit"
+      aria-label="Send message"
+      disabled
+    >
+      <i class="fa-solid fa-paper-plane"></i>
+    </button>
+
+  </form>
+
+
+  <div
+    class="attachment-sheet"
+    id="attachmentSheet"
+    hidden
+  >
+
+    <div
+      class="attachment-backdrop"
+      id="attachmentBackdrop"
+    ></div>
+
+    <div class="attachment-panel">
+
+      <div class="sheet-handle"></div>
+
+      <h2>Send attachment</h2>
+
+      <div class="attachment-options">
+
+        <button
+          id="chooseImage"
+          type="button"
+        >
+          <span class="option-icon image">
+            <i class="fa-regular fa-image"></i>
+          </span>
+
+          <span>Photo</span>
+        </button>
+
+      </div>
+
+      <button
+        class="cancel-sheet"
+        id="cancelAttachment"
+        type="button"
+      >
+        Cancel
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <input
+    type="file"
+    id="imageInput"
+    accept="image/*"
+    hidden
+  >
+
+</div>
+
+
+<script
+  type="module"
+  src="chat.js"
+></script>
+
+</body>
+</html>

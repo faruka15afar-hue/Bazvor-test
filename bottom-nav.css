@@ -1,0 +1,145 @@
+/* =========================================================
+   BAZVOR — SHARED BOTTOM NAVIGATION
+   EXACT HOME PAGE SIZE
+========================================================= */
+
+.bottom-navigation {
+
+  position: fixed;
+
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  z-index: 2000;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  height: calc(56px + env(safe-area-inset-bottom));
+
+  padding: 0 3px env(safe-area-inset-bottom);
+
+  border-top: 1px solid #ededed;
+
+  background: rgba(255,255,255,.99);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  box-shadow:
+    0 -4px 16px rgba(0,0,0,.06);
+}
+
+
+.bottom-nav-item {
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 3px;
+
+  min-width: 52px;
+  height: 52px;
+
+  color: #555;
+
+  font-size: 8px;
+  font-weight: 500;
+
+  text-decoration: none;
+
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+.bottom-nav-item i {
+
+  font-size: 16px;
+
+}
+
+
+.bottom-nav-item.active {
+
+  color: #e5006d;
+
+}
+
+
+/* =========================================================
+   CART ICON
+========================================================= */
+
+.bottom-cart-icon {
+
+  position: relative;
+
+  display: inline-flex;
+
+}
+
+
+.bottom-cart-icon > i {
+
+  font-size: 16px;
+
+}
+
+
+/* =========================================================
+   CART BADGE
+========================================================= */
+
+.cart-badge {
+
+  position: absolute;
+
+  top: -7px;
+  right: -9px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 14px;
+  height: 14px;
+
+  padding: 0 3px;
+
+  border-radius: 20px;
+
+  background: #e5006d;
+
+  color: #fff;
+
+  font-size: 7px;
+  font-weight: 700;
+
+}
+
+
+/* =========================================================
+   DESKTOP
+========================================================= */
+
+@media (min-width: 768px) {
+
+  .bottom-navigation {
+
+    left: 50%;
+    right: auto;
+
+    width: min(1280px, 100%);
+
+    transform: translateX(-50%);
+
+  }
+
+}

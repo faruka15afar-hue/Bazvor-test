@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  >
+
+  <title>BAZVOR — Checkout</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
+  <link rel="stylesheet" href="checkout.css">
+  <link rel="stylesheet" href="bottom-nav.css">
+</head>
+
+<body>
+
+<div class="checkout-app">
+
+
+  <!-- ================= HEADER ================= -->
+
+  <header class="checkout-header">
+
+    <button
+      id="backButton"
+      class="header-button"
+      type="button"
+      aria-label="Back"
+    >
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+
+
+    <div class="header-title">
+
+      <h1>
+        Checkout
+      </h1>
+
+      <span>
+        Secure checkout
+      </span>
+
+    </div>
+
+
+    <span class="secure-icon">
+      <i class="fa-solid fa-shield-halved"></i>
+    </span>
+
+  </header>
+
+
+
+  <!-- ================= PAGE ================= -->
+
+  <main class="checkout-page">
+
+
+    <!-- ================= ADDRESS ================= -->
+
+    <section class="checkout-section">
+
+      <div class="section-title">
+
+        <div>
+          <small>DELIVERY</small>
+          <h2>Delivery Address</h2>
+        </div>
+
+        <span class="section-step">
+          01
+        </span>
+
+      </div>
+
+
+      <button
+        id="addressCard"
+        class="address-card"
+        type="button"
+      >
+
+        <span class="address-icon">
+          <i class="fa-solid fa-location-dot"></i>
+        </span>
+
+
+        <span class="address-content">
+
+          <strong id="addressName">
+            Add delivery address
+          </strong>
+
+          <span id="addressPhone"></span>
+
+          <small id="addressText">
+            Choose where you want your order delivered
+          </small>
+
+        </span>
+
+
+        <span
+          id="addressAction"
+          class="address-action"
+        >
+          Add
+        </span>
+
+      </button>
+
+    </section>
+
+
+
+    <!-- ================= PRODUCTS ================= -->
+
+    <section class="checkout-section">
+
+      <div class="section-title">
+
+        <div>
+          <small>ORDER</small>
+          <h2>
+            Your Products
+            <span id="productCount"></span>
+          </h2>
+        </div>
+
+        <span class="section-step">
+          02
+        </span>
+
+      </div>
+
+
+      <div
+        id="checkoutItems"
+        class="checkout-items"
+      ></div>
+
+    </section>
+
+
+
+    <!-- ================= DELIVERY ================= -->
+
+    <section class="checkout-section">
+
+      <div class="section-title">
+
+        <div>
+          <small>SHIPPING</small>
+          <h2>Delivery Method</h2>
+        </div>
+
+        <span class="section-step">
+          03
+        </span>
+
+      </div>
+
+
+      <div class="delivery-option active">
+
+        <span class="delivery-radio">
+          <span></span>
+        </span>
+
+
+        <span class="delivery-icon">
+          <i class="fa-solid fa-truck-fast"></i>
+        </span>
+
+
+        <span class="delivery-content">
+
+          <strong>
+            Standard Delivery
+          </strong>
+
+          <small>
+            Estimated delivery in 2–4 days
+          </small>
+
+        </span>
+
+
+        <strong
+          id="deliveryMethodPrice"
+          class="delivery-price"
+        >
+          ৳0
+        </strong>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ================= COUPON ================= -->
+
+    <section
+      class="checkout-section coupon-section"
+      id="couponSection"
+      hidden
+    >
+
+      <div class="section-title">
+
+        <div>
+          <small>SAVINGS</small>
+          <h2>Coupon</h2>
+        </div>
+
+      </div>
+
+
+      <div class="applied-coupon">
+
+        <span class="coupon-icon">
+          <i class="fa-solid fa-ticket"></i>
+        </span>
+
+
+        <span class="coupon-content">
+
+          <strong id="couponCode">
+            Coupon
+          </strong>
+
+          <small>
+            Coupon applied successfully
+          </small>
+
+        </span>
+
+
+        <strong
+          id="couponSaving"
+          class="coupon-saving"
+        >
+          -৳0
+        </strong>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ================= PAYMENT ================= -->
+
+    <section class="checkout-section">
+
+      <div class="section-title">
+
+        <div>
+          <small>PAYMENT</small>
+          <h2>Payment Method</h2>
+        </div>
+
+        <span class="section-step">
+          04
+        </span>
+
+      </div>
+
+
+      <div class="payment-options">
+
+
+        <!-- COD -->
+
+        <label class="payment-option active">
+
+          <input
+            type="radio"
+            name="payment"
+            value="cod"
+            checked
+          >
+
+          <span class="payment-radio">
+            <span></span>
+          </span>
+
+
+          <span class="payment-icon cod-icon">
+            <i class="fa-solid fa-money-bill-wave"></i>
+          </span>
+
+
+          <span class="payment-content">
+
+            <strong>
+              Cash on Delivery
+            </strong>
+
+            <small>
+              Pay when your order arrives
+            </small>
+
+          </span>
+
+
+          <span class="payment-check">
+            <i class="fa-solid fa-check"></i>
+          </span>
+
+        </label>
+
+
+
+        <!-- BKASH -->
+
+        <div class="payment-option disabled">
+
+          <span class="payment-radio"></span>
+
+
+          <span class="payment-icon bkash-icon">
+            b
+          </span>
+
+
+          <span class="payment-content">
+
+            <strong>
+              bKash
+            </strong>
+
+            <small>
+              Mobile payment
+            </small>
+
+          </span>
+
+
+          <span class="coming-soon">
+            Soon
+          </span>
+
+        </div>
+
+
+
+        <!-- NAGAD -->
+
+        <div class="payment-option disabled">
+
+          <span class="payment-radio"></span>
+
+
+          <span class="payment-icon nagad-icon">
+            N
+          </span>
+
+
+          <span class="payment-content">
+
+            <strong>
+              Nagad
+            </strong>
+
+            <small>
+              Mobile payment
+            </small>
+
+          </span>
+
+
+          <span class="coming-soon">
+            Soon
+          </span>
+
+        </div>
+
+
+
+        <!-- CARD -->
+
+        <div class="payment-option disabled">
+
+          <span class="payment-radio"></span>
+
+
+          <span class="payment-icon card-icon">
+            <i class="fa-regular fa-credit-card"></i>
+          </span>
+
+
+          <span class="payment-content">
+
+            <strong>
+              Debit / Credit Card
+            </strong>
+
+            <small>
+              Visa, Mastercard & more
+            </small>
+
+          </span>
+
+
+          <span class="coming-soon">
+            Soon
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ================= SUMMARY ================= -->
+
+    <section class="checkout-section summary-section">
+
+      <div class="section-title">
+
+        <div>
+          <small>PAYMENT DETAILS</small>
+          <h2>Order Summary</h2>
+        </div>
+
+
+        <span class="summary-bag">
+          <i class="fa-solid fa-bag-shopping"></i>
+        </span>
+
+      </div>
+
+
+      <div class="summary-row">
+
+        <span>
+          Subtotal
+          <small id="summaryItemCount"></small>
+        </span>
+
+        <strong id="subtotal">
+          ৳0
+        </strong>
+
+      </div>
+
+
+      <div class="summary-row">
+
+        <span>
+          Product savings
+        </span>
+
+        <strong
+          class="green"
+          id="productSavings"
+        >
+          -৳0
+        </strong>
+
+      </div>
+
+
+      <div
+        class="summary-row"
+        id="summaryCouponRow"
+        hidden
+      >
+
+        <span>
+          Coupon discount
+        </span>
+
+        <strong
+          class="green"
+          id="summaryCoupon"
+        >
+          -৳0
+        </strong>
+
+      </div>
+
+
+      <div class="summary-row">
+
+        <span>
+          Delivery
+        </span>
+
+        <strong id="deliveryCharge">
+          ৳0
+        </strong>
+
+      </div>
+
+
+      <div class="summary-line"></div>
+
+
+      <div class="summary-total">
+
+        <span>
+
+          <strong>
+            Total
+          </strong>
+
+          <small>
+            Total payable amount
+          </small>
+
+        </span>
+
+
+        <strong id="grandTotal">
+          ৳0
+        </strong>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ================= NOTE ================= -->
+
+    <section class="secure-note">
+
+      <i class="fa-solid fa-shield-halved"></i>
+
+      <div>
+
+        <strong>
+          Safe & Secure Checkout
+        </strong>
+
+        <p>
+          Your order information is protected by Bazvor.
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <!-- ================= ADDRESS OVERLAY ================= -->
+
+  <div
+    id="addressBackdrop"
+    class="sheet-backdrop"
+    hidden
+  ></div>
+
+
+
+  <!-- ================= ADDRESS SHEET ================= -->
+
+  <section
+    id="addressSheet"
+    class="address-sheet"
+    aria-hidden="true"
+  >
+
+    <div class="sheet-handle"></div>
+
+
+    <div class="sheet-header">
+
+      <div>
+
+        <small>
+          DELIVERY
+        </small>
+
+        <h2>
+          Choose Address
+        </h2>
+
+      </div>
+
+
+      <button
+        id="closeAddressSheet"
+        type="button"
+        aria-label="Close"
+      >
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+    </div>
+
+
+
+    <!-- SAVED -->
+
+    <div
+      id="savedAddresses"
+      class="saved-addresses"
+    ></div>
+
+
+
+    <div class="address-divider">
+
+      <span>
+        Add new address
+      </span>
+
+    </div>
+
+
+
+    <!-- ADDRESS FORM -->
+
+    <form id="addressForm">
+
+
+      <div class="form-field">
+
+        <label for="addressFullName">
+          Full Name *
+        </label>
+
+        <input
+          id="addressFullName"
+          type="text"
+          autocomplete="name"
+          placeholder="Your full name"
+          required
+        >
+
+      </div>
+
+
+
+      <div class="form-field">
+
+        <label for="addressPhoneInput">
+          Mobile Number *
+        </label>
+
+        <input
+          id="addressPhoneInput"
+          type="tel"
+          autocomplete="tel"
+          inputmode="tel"
+          placeholder="01XXXXXXXXX"
+          required
+        >
+
+      </div>
+
+
+
+      <div class="form-field">
+
+        <label for="addressLine">
+          Full Address *
+        </label>
+
+        <textarea
+          id="addressLine"
+          rows="3"
+          placeholder="House, road, village or area"
+          required
+        ></textarea>
+
+      </div>
+
+
+
+      <div class="form-two">
+
+
+        <div class="form-field">
+
+          <label for="addressArea">
+            Area
+          </label>
+
+          <input
+            id="addressArea"
+            type="text"
+            placeholder="Area"
+          >
+
+        </div>
+
+
+
+        <div class="form-field">
+
+          <label for="addressCity">
+            City *
+          </label>
+
+          <input
+            id="addressCity"
+            type="text"
+            placeholder="City"
+            required
+          >
+
+        </div>
+
+      </div>
+
+
+
+      <label class="default-address">
+
+        <input
+          id="makeDefaultAddress"
+          type="checkbox"
+        >
+
+        <span class="default-check"></span>
+
+        <span>
+          Set as default address
+        </span>
+
+      </label>
+
+
+
+      <button
+        class="save-address"
+        id="saveAddressButton"
+        type="submit"
+      >
+        Save & Use Address
+      </button>
+
+    </form>
+
+  </section>
+
+
+
+  <!-- ================= BOTTOM BAR ================= -->
+
+  <div class="checkout-bottom-bar">
+
+    <div class="bottom-total">
+
+      <span>
+        Total
+      </span>
+
+      <strong id="bottomTotal">
+        ৳0
+      </strong>
+
+    </div>
+
+
+    <button
+      id="placeOrderButton"
+      type="button"
+      disabled
+    >
+
+      <span>
+        Place Order
+      </span>
+
+      <i class="fa-solid fa-arrow-right"></i>
+
+    </button>
+
+  </div>
+
+
+
+  <!-- ================= LOADING ================= -->
+
+  <div
+    id="orderLoading"
+    class="order-loading"
+    hidden
+  >
+
+    <div class="loading-card">
+
+      <span class="spinner"></span>
+
+      <strong>
+        Placing your order
+      </strong>
+
+      <small>
+        Please don't close this page
+      </small>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- ================= TOAST ================= -->
+
+  <div
+    id="toast"
+    class="toast"
+    role="status"
+  ></div>
+
+</div>
+
+
+<script
+  type="module"
+  src="checkout.js?v=10"
+></script>
+
+<script src="bottom-nav.js"></script>
+
+</body>
+</html>

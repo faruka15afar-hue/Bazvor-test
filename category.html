@@ -1,0 +1,689 @@
+<!-- categories.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  >
+
+  <meta
+    name="theme-color"
+    content="#ffffff"
+  >
+
+  <title>BAZVOR — Categories</title>
+
+
+  <!-- =====================================================
+       GOOGLE FONT
+  ====================================================== -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <!-- =====================================================
+       FONT AWESOME
+  ====================================================== -->
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
+
+  <!-- =====================================================
+       CATEGORY CSS
+  ====================================================== -->
+
+  <link
+    rel="stylesheet"
+    href="category.css"
+  >
+
+
+  <!-- =====================================================
+       SHARED BOTTOM NAVIGATION CSS
+  ====================================================== -->
+
+  <link
+    rel="stylesheet"
+    href="bottom-nav.css"
+  >
+
+</head>
+
+
+<body>
+
+  <div class="category-page">
+
+
+    <!-- ===================================================
+         HEADER
+    ==================================================== -->
+
+    <header class="category-header">
+
+      <div class="category-header-inner">
+
+        <button
+          class="header-back"
+          id="backButton"
+          type="button"
+          aria-label="Back"
+        >
+
+          <i class="fa-solid fa-arrow-left"></i>
+
+        </button>
+
+
+        <h1>
+          Categories
+        </h1>
+
+
+        <button
+          class="header-cart"
+          id="headerCartButton"
+          type="button"
+          aria-label="Cart"
+        >
+
+          <i class="fa-solid fa-cart-shopping"></i>
+
+          <span id="headerCartBadge">
+            0
+          </span>
+
+        </button>
+
+      </div>
+
+    </header>
+
+
+    <!-- ===================================================
+         MAIN
+    ==================================================== -->
+
+    <main>
+
+
+      <!-- =================================================
+           CATEGORY SECTION
+      ================================================== -->
+
+      <section class="category-section">
+
+        <div class="section-heading">
+
+          <h2>
+            Shop by Category
+          </h2>
+
+        </div>
+
+
+        <div
+          class="category-grid"
+          id="categoryGrid"
+        ></div>
+
+      </section>
+
+
+      <!-- =================================================
+           PRODUCTS SECTION
+      ================================================== -->
+
+      <section
+        class="products-section"
+        id="productsSection"
+      >
+
+
+        <div class="products-top">
+
+
+          <div class="products-title">
+
+            <h2 id="productsTitle">
+              All Products
+            </h2>
+
+            <p id="productsCount">
+              0 Products
+            </p>
+
+          </div>
+
+
+          <div class="products-tools">
+
+
+            <button
+              type="button"
+              id="filterButton"
+              class="tool-button"
+            >
+
+              <i class="fa-solid fa-sliders"></i>
+
+              <span>
+                Filter
+              </span>
+
+            </button>
+
+
+            <button
+              type="button"
+              id="sortButton"
+              class="tool-button"
+            >
+
+              <i class="fa-solid fa-arrow-down-wide-short"></i>
+
+              <span>
+                Sort
+              </span>
+
+            </button>
+
+
+          </div>
+
+        </div>
+
+
+        <!-- =================================================
+             ACTIVE FILTER
+        ================================================== -->
+
+        <div
+          class="active-filter"
+          id="activeFilter"
+          hidden
+        >
+
+          <span id="activeFilterText"></span>
+
+
+          <button
+            type="button"
+            id="clearActiveFilter"
+            aria-label="Clear filter"
+          >
+
+            <i class="fa-solid fa-xmark"></i>
+
+          </button>
+
+        </div>
+
+
+        <!-- =================================================
+             PRODUCT GRID
+        ================================================== -->
+
+        <div
+          class="product-grid"
+          id="productGrid"
+        >
+
+          <div class="loading-box">
+
+            <div class="loading-spinner"></div>
+
+
+            <strong>
+              Loading products
+            </strong>
+
+
+            <span>
+              Connecting to BAZVOR...
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <!-- =================================================
+             LOAD MORE
+        ================================================== -->
+
+        <button
+          type="button"
+          id="loadMoreButton"
+          class="load-more-button"
+          hidden
+        >
+          Load More
+        </button>
+
+
+      </section>
+
+    </main>
+
+
+    <!-- ===================================================
+         FILTER OVERLAY
+    ==================================================== -->
+
+    <div
+      class="drawer-overlay"
+      id="filterOverlay"
+      hidden
+    ></div>
+
+
+    <!-- ===================================================
+         FILTER DRAWER
+    ==================================================== -->
+
+    <aside
+      class="filter-drawer"
+      id="filterDrawer"
+      aria-hidden="true"
+    >
+
+
+      <div class="drawer-header">
+
+
+        <div>
+
+          <small>
+            BAZVOR
+          </small>
+
+          <h3>
+            Filter Products
+          </h3>
+
+        </div>
+
+
+        <button
+          id="filterClose"
+          class="drawer-close"
+          type="button"
+          aria-label="Close"
+        >
+
+          <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+
+      </div>
+
+
+      <div class="drawer-body">
+
+
+        <!-- PRICE -->
+
+        <div class="filter-group">
+
+          <h4>
+            Price Range
+          </h4>
+
+
+          <div class="price-inputs">
+
+            <input
+              type="number"
+              id="minPrice"
+              min="0"
+              placeholder="Min ৳"
+            >
+
+
+            <span>
+              —
+            </span>
+
+
+            <input
+              type="number"
+              id="maxPrice"
+              min="0"
+              placeholder="Max ৳"
+            >
+
+          </div>
+
+        </div>
+
+
+        <!-- RATING -->
+
+        <div class="filter-group">
+
+          <h4>
+            Rating
+          </h4>
+
+
+          <label>
+
+            <input
+              type="radio"
+              name="ratingFilter"
+              value="0"
+              checked
+            >
+
+            <span>
+              All ratings
+            </span>
+
+          </label>
+
+
+          <label>
+
+            <input
+              type="radio"
+              name="ratingFilter"
+              value="4"
+            >
+
+            <span>
+              4★ &amp; above
+            </span>
+
+          </label>
+
+
+          <label>
+
+            <input
+              type="radio"
+              name="ratingFilter"
+              value="3"
+            >
+
+            <span>
+              3★ &amp; above
+            </span>
+
+          </label>
+
+        </div>
+
+
+        <!-- OFFERS -->
+
+        <div class="filter-group">
+
+          <h4>
+            Offers
+          </h4>
+
+
+          <label>
+
+            <input
+              type="checkbox"
+              id="discountOnly"
+            >
+
+            <span>
+              Discounted products only
+            </span>
+
+          </label>
+
+        </div>
+
+
+      </div>
+
+
+      <!-- FILTER FOOTER -->
+
+      <div class="drawer-footer">
+
+
+        <button
+          type="button"
+          id="clearFilter"
+          class="clear-button"
+        >
+          Clear
+        </button>
+
+
+        <button
+          type="button"
+          id="applyFilter"
+          class="apply-button"
+        >
+          Apply Filter
+        </button>
+
+
+      </div>
+
+
+    </aside>
+
+
+    <!-- ===================================================
+         SORT OVERLAY
+    ==================================================== -->
+
+    <div
+      class="sort-overlay"
+      id="sortOverlay"
+      hidden
+    ></div>
+
+
+    <!-- ===================================================
+         SORT SHEET
+    ==================================================== -->
+
+    <div
+      class="sort-sheet"
+      id="sortSheet"
+      aria-hidden="true"
+    >
+
+
+      <div class="sort-handle"></div>
+
+
+      <div class="sort-header">
+
+        <h3>
+          Sort Products
+        </h3>
+
+
+        <button
+          type="button"
+          id="sortClose"
+          aria-label="Close"
+        >
+
+          <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+      </div>
+
+
+      <div class="sort-list">
+
+
+        <!-- LATEST -->
+
+        <button
+          type="button"
+          class="sort-item active"
+          data-sort="latest"
+        >
+
+          <span>
+
+            <i class="fa-solid fa-bolt"></i>
+
+            Latest
+
+          </span>
+
+
+          <i class="fa-solid fa-check"></i>
+
+        </button>
+
+
+        <!-- PRICE LOW -->
+
+        <button
+          type="button"
+          class="sort-item"
+          data-sort="price-low"
+        >
+
+          <span>
+
+            <i class="fa-solid fa-arrow-down-1-9"></i>
+
+            Price: Low to High
+
+          </span>
+
+
+          <i class="fa-solid fa-check"></i>
+
+        </button>
+
+
+        <!-- PRICE HIGH -->
+
+        <button
+          type="button"
+          class="sort-item"
+          data-sort="price-high"
+        >
+
+          <span>
+
+            <i class="fa-solid fa-arrow-up-9-1"></i>
+
+            Price: High to Low
+
+          </span>
+
+
+          <i class="fa-solid fa-check"></i>
+
+        </button>
+
+
+        <!-- RATING -->
+
+        <button
+          type="button"
+          class="sort-item"
+          data-sort="rating"
+        >
+
+          <span>
+
+            <i class="fa-solid fa-star"></i>
+
+            Highest Rated
+
+          </span>
+
+
+          <i class="fa-solid fa-check"></i>
+
+        </button>
+
+
+        <!-- DISCOUNT -->
+
+        <button
+          type="button"
+          class="sort-item"
+          data-sort="discount"
+        >
+
+          <span>
+
+            <i class="fa-solid fa-percent"></i>
+
+            Biggest Discount
+
+          </span>
+
+
+          <i class="fa-solid fa-check"></i>
+
+        </button>
+
+
+      </div>
+
+    </div>
+
+
+    <!-- ===================================================
+         TOAST
+    ==================================================== -->
+
+    <div
+      class="bazvor-toast"
+      id="bazvorToast"
+    ></div>
+
+
+  </div>
+
+
+  <!-- =====================================================
+       SHARED BOTTOM NAVIGATION
+  ====================================================== -->
+
+  <script src="bottom-nav.js"></script>
+
+
+  <!-- =====================================================
+       CATEGORY JAVASCRIPT
+  ====================================================== -->
+
+  <script
+    type="module"
+    src="category.js"
+  ></script>
+
+
+</body>
+</html>

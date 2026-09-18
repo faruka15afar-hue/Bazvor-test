@@ -1,0 +1,864 @@
+[
+  {
+    "name": "Barishal",
+    "districts": [
+      {
+        "name": "Barguna",
+        "upazilas": [
+          {"name": "Amtali", "unions": []},
+          {"name": "Bamna", "unions": []},
+          {"name": "Barguna Sadar", "unions": []},
+          {"name": "Betagi", "unions": []},
+          {"name": "Patharghata", "unions": []},
+          {"name": "Taltali", "unions": []}
+        ]
+      },
+      {
+        "name": "Barishal",
+        "upazilas": [
+          {"name": "Agailjhara", "unions": []},
+          {"name": "Babuganj", "unions": []},
+          {"name": "Bakerganj", "unions": []},
+          {"name": "Banaripara", "unions": []},
+          {"name": "Gaurnadi", "unions": []},
+          {"name": "Hizla", "unions": []},
+          {"name": "Barishal Sadar", "unions": []},
+          {"name": "Mehendiganj", "unions": []},
+          {"name": "Muladi", "unions": []},
+          {"name": "Wazirpur", "unions": []}
+        ]
+      },
+      {
+        "name": "Bhola",
+        "upazilas": [
+          {"name": "Bhola Sadar", "unions": []},
+          {"name": "Burhanuddin", "unions": []},
+          {"name": "Char Fasson", "unions": []},
+          {"name": "Daulatkhan", "unions": []},
+          {"name": "Lalmohan", "unions": []},
+          {"name": "Manpura", "unions": []},
+          {"name": "Tazumuddin", "unions": []}
+        ]
+      },
+      {
+        "name": "Jhalokati",
+        "upazilas": [
+          {"name": "Jhalokati Sadar", "unions": []},
+          {"name": "Kathalia", "unions": []},
+          {"name": "Nalchity", "unions": []},
+          {"name": "Rajapur", "unions": []}
+        ]
+      },
+      {
+        "name": "Patuakhali",
+        "upazilas": [
+          {"name": "Bauphal", "unions": []},
+          {"name": "Dashmina", "unions": []},
+          {"name": "Dumki", "unions": []},
+          {"name": "Galachipa", "unions": []},
+          {"name": "Kalapara", "unions": []},
+          {"name": "Mirzaganj", "unions": []},
+          {"name": "Patuakhali Sadar", "unions": []},
+          {"name": "Rangabali", "unions": []}
+        ]
+      },
+      {
+        "name": "Pirojpur",
+        "upazilas": [
+          {"name": "Bhandaria", "unions": []},
+          {"name": "Indurkani", "unions": []},
+          {"name": "Kawkhali", "unions": []},
+          {"name": "Mathbaria", "unions": []},
+          {"name": "Nazirpur", "unions": []},
+          {"name": "Nesarabad", "unions": []},
+          {"name": "Pirojpur Sadar", "unions": []}
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Chattogram",
+    "districts": [
+      {
+        "name": "Bandarban",
+        "upazilas": [
+          {"name": "Alikadam", "unions": []},
+          {"name": "Bandarban Sadar", "unions": []},
+          {"name": "Lama", "unions": []},
+          {"name": "Naikhongchhari", "unions": []},
+          {"name": "Rowangchhari", "unions": []},
+          {"name": "Ruma", "unions": []},
+          {"name": "Thanchi", "unions": []}
+        ]
+      },
+      {
+        "name": "Brahmanbaria",
+        "upazilas": [
+          {"name": "Akhaura", "unions": []},
+          {"name": "Ashuganj", "unions": []},
+          {"name": "Bancharampur", "unions": []},
+          {"name": "Bijoynagar", "unions": []},
+          {"name": "Brahmanbaria Sadar", "unions": []},
+          {"name": "Kasba", "unions": []},
+          {"name": "Nabinagar", "unions": []},
+          {"name": "Nasirnagar", "unions": []},
+          {"name": "Sarail", "unions": []}
+        ]
+      },
+      {
+        "name": "Chandpur",
+        "upazilas": [
+          {"name": "Chandpur Sadar", "unions": []},
+          {"name": "Faridganj", "unions": []},
+          {"name": "Haimchar", "unions": []},
+          {"name": "Hajiganj", "unions": []},
+          {"name": "Kachua", "unions": []},
+          {"name": "Matlab Dakshin", "unions": []},
+          {"name": "Matlab Uttar", "unions": []},
+          {"name": "Shahrasti", "unions": []}
+        ]
+      },
+      {
+        "name": "Chattogram",
+        "upazilas": [
+          {"name": "Anwara", "unions": []},
+          {"name": "Banshkhali", "unions": []},
+          {"name": "Boalkhali", "unions": []},
+          {"name": "Chandanaish", "unions": []},
+          {"name": "Fatikchhari", "unions": []},
+          {"name": "Hathazari", "unions": []},
+          {"name": "Karnaphuli", "unions": []},
+          {"name": "Lohagara", "unions": []},
+          {"name": "Mirsharai", "unions": []},
+          {"name": "Patiya", "unions": []},
+          {"name": "Rangunia", "unions": []},
+          {"name": "Raozan", "unions": []},
+          {"name": "Sandwip", "unions": []},
+          {"name": "Satkania", "unions": []},
+          {"name": "Sitakunda", "unions": []}
+        ]
+      },
+      {
+        "name": "Cumilla",
+        "upazilas": [
+          {"name": "Barura", "unions": []},
+          {"name": "Brahmanpara", "unions": []},
+          {"name": "Burichang", "unions": []},
+          {"name": "Chandina", "unions": []},
+          {"name": "Chauddagram", "unions": []},
+          {"name": "Cumilla Adarsha Sadar", "unions": []},
+          {"name": "Cumilla Sadar Dakshin", "unions": []},
+          {"name": "Daudkandi", "unions": []},
+          {"name": "Debidwar", "unions": []},
+          {"name": "Homna", "unions": []},
+          {"name": "Laksam", "unions": []},
+          {"name": "Lalmai", "unions": []},
+          {"name": "Meghna", "unions": []},
+          {"name": "Monoharganj", "unions": []},
+          {"name": "Muradnagar", "unions": []},
+          {"name": "Nangalkot", "unions": []},
+          {"name": "Titas", "unions": []}
+        ]
+      },
+      {
+        "name": "Cox's Bazar",
+        "upazilas": [
+          {"name": "Chakaria", "unions": []},
+          {"name": "Cox's Bazar Sadar", "unions": []},
+          {"name": "Eidgaon", "unions": []},
+          {"name": "Kutubdia", "unions": []},
+          {"name": "Maheshkhali", "unions": []},
+          {"name": "Pekua", "unions": []},
+          {"name": "Ramu", "unions": []},
+          {"name": "Teknaf", "unions": []},
+          {"name": "Ukhia", "unions": []}
+        ]
+      },
+      {
+        "name": "Feni",
+        "upazilas": [
+          {"name": "Chhagalnaiya", "unions": []},
+          {"name": "Daganbhuiyan", "unions": []},
+          {"name": "Feni Sadar", "unions": []},
+          {"name": "Fulgazi", "unions": []},
+          {"name": "Parshuram", "unions": []},
+          {"name": "Sonagazi", "unions": []}
+        ]
+      },
+      {
+        "name": "Khagrachhari",
+        "upazilas": [
+          {"name": "Dighinala", "unions": []},
+          {"name": "Guimara", "unions": []},
+          {"name": "Khagrachhari Sadar", "unions": []},
+          {"name": "Lakshmichhari", "unions": []},
+          {"name": "Mahalchhari", "unions": []},
+          {"name": "Manikchhari", "unions": []},
+          {"name": "Matiranga", "unions": []},
+          {"name": "Panchhari", "unions": []},
+          {"name": "Ramgarh", "unions": []}
+        ]
+      },
+      {
+        "name": "Lakshmipur",
+        "upazilas": [
+          {"name": "Kamalnagar", "unions": []},
+          {"name": "Lakshmipur Sadar", "unions": []},
+          {"name": "Raipur", "unions": []},
+          {"name": "Ramganj", "unions": []},
+          {"name": "Ramgati", "unions": []}
+        ]
+      },
+      {
+        "name": "Noakhali",
+        "upazilas": [
+          {"name": "Begumganj", "unions": []},
+          {"name": "Chatkhil", "unions": []},
+          {"name": "Companiganj", "unions": []},
+          {"name": "Hatiya", "unions": []},
+          {"name": "Kabirhat", "unions": []},
+          {"name": "Noakhali Sadar", "unions": []},
+          {"name": "Senbagh", "unions": []},
+          {"name": "Sonaimuri", "unions": []},
+          {"name": "Subarnachar", "unions": []}
+        ]
+      },
+      {
+        "name": "Rangamati",
+        "upazilas": [
+          {"name": "Baghaichhari", "unions": []},
+          {"name": "Barkal", "unions": []},
+          {"name": "Belaichhari", "unions": []},
+          {"name": "Juraichhari", "unions": []},
+          {"name": "Kaptai", "unions": []},
+          {"name": "Kawkhali", "unions": []},
+          {"name": "Langadu", "unions": []},
+          {"name": "Naniarchar", "unions": []},
+          {"name": "Rajasthali", "unions": []},
+          {"name": "Rangamati Sadar", "unions": []}
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Dhaka",
+    "districts": [
+      {
+        "name": "Dhaka",
+        "upazilas": [
+          {"name": "Dhamrai", "unions": []},
+          {"name": "Dohar", "unions": []},
+          {"name": "Keraniganj", "unions": []},
+          {"name": "Nawabganj", "unions": []},
+          {"name": "Savar", "unions": []}
+        ]
+      },
+      {
+        "name": "Faridpur",
+        "upazilas": [
+          {"name": "Alfadanga", "unions": []},
+          {"name": "Bhanga", "unions": []},
+          {"name": "Boalmari", "unions": []},
+          {"name": "Charbhadrasan", "unions": []},
+          {"name": "Faridpur Sadar", "unions": []},
+          {"name": "Madhukhali", "unions": []},
+          {"name": "Nagarkanda", "unions": []},
+          {"name": "Sadarpur", "unions": []},
+          {"name": "Saltha", "unions": []}
+        ]
+      },
+      {
+        "name": "Gazipur",
+        "upazilas": [
+          {"name": "Gazipur Sadar", "unions": []},
+          {"name": "Kaliakair", "unions": []},
+          {"name": "Kaliganj", "unions": []},
+          {"name": "Kapasia", "unions": []},
+          {"name": "Sreepur", "unions": []}
+        ]
+      },
+      {
+        "name": "Gopalganj",
+        "upazilas": [
+          {"name": "Gopalganj Sadar", "unions": []},
+          {"name": "Kashiani", "unions": []},
+          {"name": "Kotalipara", "unions": []},
+          {"name": "Muksudpur", "unions": []},
+          {"name": "Tungipara", "unions": []}
+        ]
+      },
+      {
+        "name": "Kishoreganj",
+        "upazilas": [
+          {"name": "Austagram", "unions": []},
+          {"name": "Bajitpur", "unions": []},
+          {"name": "Bhairab", "unions": []},
+          {"name": "Hossainpur", "unions": []},
+          {"name": "Itna", "unions": []},
+          {"name": "Karimganj", "unions": []},
+          {"name": "Katiadi", "unions": []},
+          {"name": "Kishoreganj Sadar", "unions": []},
+          {"name": "Kuliarchar", "unions": []},
+          {"name": "Mithamain", "unions": []},
+          {"name": "Nikli", "unions": []},
+          {"name": "Pakundia", "unions": []},
+          {"name": "Tarail", "unions": []}
+        ]
+      },
+      {
+        "name": "Madaripur",
+        "upazilas": [
+          {"name": "Dasar", "unions": []},
+          {"name": "Kalkini", "unions": []},
+          {"name": "Madaripur Sadar", "unions": []},
+          {"name": "Rajoir", "unions": []},
+          {"name": "Shibchar", "unions": []}
+        ]
+      },
+      {
+        "name": "Manikganj",
+        "upazilas": [
+          {"name": "Daulatpur", "unions": []},
+          {"name": "Ghior", "unions": []},
+          {"name": "Harirampur", "unions": []},
+          {"name": "Manikganj Sadar", "unions": []},
+          {"name": "Saturia", "unions": []},
+          {"name": "Shibalaya", "unions": []},
+          {"name": "Singair", "unions": []}
+        ]
+      },
+      {
+        "name": "Munshiganj",
+        "upazilas": [
+          {"name": "Gazaria", "unions": []},
+          {"name": "Lohajang", "unions": []},
+          {"name": "Munshiganj Sadar", "unions": []},
+          {"name": "Sirajdikhan", "unions": []},
+          {"name": "Sreenagar", "unions": []},
+          {"name": "Tongibari", "unions": []}
+        ]
+      },
+      {
+        "name": "Narayanganj",
+        "upazilas": [
+          {"name": "Araihazar", "unions": []},
+          {"name": "Bandar", "unions": []},
+          {"name": "Narayanganj Sadar", "unions": []},
+          {"name": "Rupganj", "unions": []},
+          {"name": "Sonargaon", "unions": []}
+        ]
+      },
+      {
+        "name": "Narsingdi",
+        "upazilas": [
+          {"name": "Belabo", "unions": []},
+          {"name": "Monohardi", "unions": []},
+          {"name": "Narsingdi Sadar", "unions": []},
+          {"name": "Palash", "unions": []},
+          {"name": "Raipura", "unions": []},
+          {"name": "Shibpur", "unions": []}
+        ]
+      },
+      {
+        "name": "Rajbari",
+        "upazilas": [
+          {"name": "Baliakandi", "unions": []},
+          {"name": "Goalanda", "unions": []},
+          {"name": "Kalukhali", "unions": []},
+          {"name": "Pangsha", "unions": []},
+          {"name": "Rajbari Sadar", "unions": []}
+        ]
+      },
+      {
+        "name": "Shariatpur",
+        "upazilas": [
+          {"name": "Bhedarganj", "unions": []},
+          {"name": "Damudya", "unions": []},
+          {"name": "Gosairhat", "unions": []},
+          {"name": "Naria", "unions": []},
+          {"name": "Shariatpur Sadar", "unions": []},
+          {"name": "Zajira", "unions": []}
+        ]
+      },
+      {
+        "name": "Tangail",
+        "upazilas": [
+          {"name": "Basail", "unions": []},
+          {"name": "Bhuapur", "unions": []},
+          {"name": "Delduar", "unions": []},
+          {"name": "Dhanbari", "unions": []},
+          {"name": "Ghatail", "unions": []},
+          {"name": "Gopalpur", "unions": []},
+          {"name": "Kalihati", "unions": []},
+          {"name": "Madhupur", "unions": []},
+          {"name": "Mirzapur", "unions": []},
+          {"name": "Nagarpur", "unions": []},
+          {"name": "Sakhipur", "unions": []},
+          {"name": "Tangail Sadar", "unions": []}
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Khulna",
+    "districts": [
+      {
+        "name": "Bagerhat",
+        "upazilas": [
+          {"name": "Bagerhat Sadar", "unions": []},
+          {"name": "Chitalmari", "unions": []},
+          {"name": "Fakirhat", "unions": []},
+          {"name": "Kachua", "unions": []},
+          {"name": "Mollahat", "unions": []},
+          {"name": "Mongla", "unions": []},
+          {"name": "Morrelganj", "unions": []},
+          {"name": "Rampal", "unions": []},
+          {"name": "Sarankhola", "unions": []}
+        ]
+      },
+      {
+        "name": "Chuadanga",
+        "upazilas": [
+          {"name": "Alamdanga", "unions": []},
+          {"name": "Chuadanga Sadar", "unions": []},
+          {"name": "Damurhuda", "unions": []},
+          {"name": "Jibannagar", "unions": []}
+        ]
+      },
+      {
+        "name": "Jashore",
+        "upazilas": [
+          {"name": "Abhaynagar", "unions": []},
+          {"name": "Bagherpara", "unions": []},
+          {"name": "Chaugachha", "unions": []},
+          {"name": "Jashore Sadar", "unions": []},
+          {"name": "Jhikargachha", "unions": []},
+          {"name": "Keshabpur", "unions": []},
+          {"name": "Manirampur", "unions": []},
+          {"name": "Sharsha", "unions": []}
+        ]
+      },
+      {
+        "name": "Jhenaidah",
+        "upazilas": [
+          {"name": "Harinakunda", "unions": []},
+          {"name": "Jhenaidah Sadar", "unions": []},
+          {"name": "Kaliganj", "unions": []},
+          {"name": "Kotchandpur", "unions": []},
+          {"name": "Maheshpur", "unions": []},
+          {"name": "Shailkupa", "unions": []}
+        ]
+      },
+      {
+        "name": "Khulna",
+        "upazilas": [
+          {"name": "Batiaghata", "unions": []},
+          {"name": "Dacope", "unions": []},
+          {"name": "Dighalia", "unions": []},
+          {"name": "Dumuria", "unions": []},
+          {"name": "Koyra", "unions": []},
+          {"name": "Paikgachha", "unions": []},
+          {"name": "Phultala", "unions": []},
+          {"name": "Rupsa", "unions": []},
+          {"name": "Terokhada", "unions": []}
+        ]
+      },
+      {
+        "name": "Kushtia",
+        "upazilas": [
+          {"name": "Bheramara", "unions": []},
+          {"name": "Daulatpur", "unions": []},
+          {"name": "Khoksa", "unions": []},
+          {"name": "Kumarkhali", "unions": []},
+          {"name": "Kushtia Sadar", "unions": []},
+          {"name": "Mirpur", "unions": []}
+        ]
+      },
+      {
+        "name": "Magura",
+        "upazilas": [
+          {"name": "Magura Sadar", "unions": []},
+          {"name": "Mohammadpur", "unions": []},
+          {"name": "Shalikha", "unions": []},
+          {"name": "Sreepur", "unions": []}
+        ]
+      },
+      {
+        "name": "Meherpur",
+        "upazilas": [
+          {"name": "Gangni", "unions": []},
+          {"name": "Meherpur Sadar", "unions": []},
+          {"name": "Mujibnagar", "unions": []}
+        ]
+      },
+      {
+        "name": "Narail",
+        "upazilas": [
+          {"name": "Kalia", "unions": []},
+          {"name": "Lohagara", "unions": []},
+          {"name": "Narail Sadar", "unions": []}
+        ]
+      },
+      {
+        "name": "Satkhira",
+        "upazilas": [
+          {"name": "Assasuni", "unions": []},
+          {"name": "Debhata", "unions": []},
+          {"name": "Kalaroa", "unions": []},
+          {"name": "Kaliganj", "unions": []},
+          {"name": "Satkhira Sadar", "unions": []},
+          {"name": "Shyamnagar", "unions": []},
+          {"name": "Tala", "unions": []}
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Mymensingh",
+    "districts": [
+      {
+        "name": "Jamalpur",
+        "upazilas": [
+          {"name": "Bakshiganj", "unions": []},
+          {"name": "Dewanganj", "unions": []},
+          {"name": "Islampur", "unions": []},
+          {"name": "Jamalpur Sadar", "unions": []},
+          {"name": "Madarganj", "unions": []},
+          {"name": "Melandaha", "unions": []},
+          {"name": "Sarishabari", "unions": []}
+        ]
+      },
+      {
+        "name": "Mymensingh",
+        "upazilas": [
+          {"name": "Bhaluka", "unions": []},
+          {"name": "Dhobaura", "unions": []},
+          {"name": "Fulbaria", "unions": []},
+          {"name": "Gaffargaon", "unions": []},
+          {"name": "Gauripur", "unions": []},
+          {"name": "Haluaghat", "unions": []},
+          {"name": "Ishwarganj", "unions": []},
+          {"name": "Muktagachha", "unions": []},
+          {"name": "Mymensingh Sadar", "unions": []},
+          {"name": "Nandail", "unions": []},
+          {"name": "Phulpur", "unions": []},
+          {"name": "Tarakanda", "unions": []},
+          {"name": "Trishal", "unions": []}
+        ]
+      },
+      {
+        "name": "Netrokona",
+        "upazilas": [
+          {"name": "Atpara", "unions": []},
+          {"name": "Barhatta", "unions": []},
+          {"name": "Durgapur", "unions": []},
+          {"name": "Kalmakanda", "unions": []},
+          {"name": "Kendua", "unions": []},
+          {"name": "Khaliajuri", "unions": []},
+          {"name": "Madan", "unions": []},
+          {"name": "Mohanganj", "unions": []},
+          {"name": "Netrokona Sadar", "unions": []},
+          {"name": "Purbadhala", "unions": []}
+        ]
+      },
+      {
+        "name": "Sherpur",
+        "upazilas": [
+          {"name": "Jhenaigati", "unions": []},
+          {"name": "Nakla", "unions": []},
+          {"name": "Nalitabari", "unions": []},
+          {"name": "Sherpur Sadar", "unions": []},
+          {"name": "Sreebardi", "unions": []}
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Rajshahi",
+    "districts": [
+      {
+        "name": "Bogura",
+        "upazilas": [
+          {"name": "Adamdighi", "unions": []},
+          {"name": "Bogura Sadar", "unions": []},
+          {"name": "Dhunat", "unions": []},
+          {"name": "Dhupchanchia", "unions": []},
+          {"name": "Gabtali", "unions": []},
+          {"name": "Kahaloo", "unions": []},
+          {"name": "Nandigram", "unions": []},
+          {"name": "Sariakandi", "unions": []},
+          {"name": "Shajahanpur", "unions": []},
+          {"name": "Sherpur", "unions": []},
+          {"name": "Shibganj", "unions": []},
+          {"name": "Sonatala", "unions": []}
+        ]
+      },
+      {
+        "name": "Chapainawabganj",
+        "upazilas": [
+          {"name": "Bholahat", "unions": []},
+          {"name": "Gomastapur", "unions": []},
+          {"name": "Nachole", "unions": []},
+          {"name": "Chapainawabganj Sadar", "unions": []},
+          {"name": "Shibganj", "unions": []}
+        ]
+      },
+      {
+        "name": "Joypurhat",
+        "upazilas": [
+          {"name": "Akkelpur", "unions": []},
+          {"name": "Joypurhat Sadar", "unions": []},
+          {"name": "Kalai", "unions": []},
+          {"name": "Khetlal", "unions": []},
+          {"name": "Panchbibi", "unions": []}
+        ]
+      },
+      {
+        "name": "Naogaon",
+        "upazilas": [
+          {"name": "Atrai", "unions": []},
+          {"name": "Badalgachhi", "unions": []},
+          {"name": "Dhamoirhat", "unions": []},
+          {"name": "Manda", "unions": []},
+          {"name": "Mahadebpur", "unions": []},
+          {"name": "Naogaon Sadar", "unions": []},
+          {"name": "Niamatpur", "unions": []},
+          {"name": "Patnitala", "unions": []},
+          {"name": "Porsha", "unions": []},
+          {"name": "Raninagar", "unions": []},
+          {"name": "Sapahar", "unions": []}
+        ]
+      },
+      {
+        "name": "Natore",
+        "upazilas": [
+          {"name": "Bagatipara", "unions": []},
+          {"name": "Baraigram", "unions": []},
+          {"name": "Gurudaspur", "unions": []},
+          {"name": "Lalpur", "unions": []},
+          {"name": "Naldanga", "unions": []},
+          {"name": "Natore Sadar", "unions": []},
+          {"name": "Singra", "unions": []}
+        ]
+      },
+      {
+        "name": "Pabna",
+        "upazilas": [
+          {"name": "Atgharia", "unions": []},
+          {"name": "Bera", "unions": []},
+          {"name": "Bhangura", "unions": []},
+          {"name": "Chatmohar", "unions": []},
+          {"name": "Faridpur", "unions": []},
+          {"name": "Ishwardi", "unions": []},
+          {"name": "Pabna Sadar", "unions": []},
+          {"name": "Santhia", "unions": []},
+          {"name": "Sujanagar", "unions": []}
+        ]
+      },
+      {
+        "name": "Rajshahi",
+        "upazilas": [
+          {"name": "Bagha", "unions": []},
+          {"name": "Bagmara", "unions": []},
+          {"name": "Charghat", "unions": []},
+          {"name": "Durgapur", "unions": []},
+          {"name": "Godagari", "unions": []},
+          {"name": "Mohanpur", "unions": []},
+          {"name": "Paba", "unions": []},
+          {"name": "Puthia", "unions": []},
+          {"name": "Tanore", "unions": []}
+        ]
+      },
+      {
+        "name": "Sirajganj",
+        "upazilas": [
+          {"name": "Belkuchi", "unions": []},
+          {"name": "Chauhali", "unions": []},
+          {"name": "Kamarkhanda", "unions": []},
+          {"name": "Kazipur", "unions": []},
+          {"name": "Raiganj", "unions": []},
+          {"name": "Shahjadpur", "unions": []},
+          {"name": "Sirajganj Sadar", "unions": []},
+          {"name": "Tarash", "unions": []},
+          {"name": "Ullapara", "unions": []}
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Rangpur",
+    "districts": [
+      {
+        "name": "Dinajpur",
+        "upazilas": [
+          {"name": "Birampur", "unions": []},
+          {"name": "Birganj", "unions": []},
+          {"name": "Biral", "unions": []},
+          {"name": "Bochaganj", "unions": []},
+          {"name": "Chirirbandar", "unions": []},
+          {"name": "Dinajpur Sadar", "unions": []},
+          {"name": "Fulbari", "unions": []},
+          {"name": "Ghoraghat", "unions": []},
+          {"name": "Hakimpur", "unions": []},
+          {"name": "Kaharole", "unions": []},
+          {"name": "Khansama", "unions": []},
+          {"name": "Nawabganj", "unions": []},
+          {"name": "Parbatipur", "unions": []}
+        ]
+      },
+      {
+        "name": "Gaibandha",
+        "upazilas": [
+          {"name": "Fulchhari", "unions": []},
+          {"name": "Gaibandha Sadar", "unions": []},
+          {"name": "Gobindaganj", "unions": []},
+          {"name": "Palashbari", "unions": []},
+          {"name": "Sadullapur", "unions": []},
+          {"name": "Saghata", "unions": []},
+          {"name": "Sundarganj", "unions": []}
+        ]
+      },
+      {
+        "name": "Kurigram",
+        "upazilas": [
+          {"name": "Bhurungamari", "unions": []},
+          {"name": "Char Rajibpur", "unions": []},
+          {"name": "Chilmari", "unions": []},
+          {"name": "Kurigram Sadar", "unions": []},
+          {"name": "Nageshwari", "unions": []},
+          {"name": "Phulbari", "unions": []},
+          {"name": "Rajarhat", "unions": []},
+          {"name": "Raomari", "unions": []},
+          {"name": "Ulipur", "unions": []}
+        ]
+      },
+      {
+        "name": "Lalmonirhat",
+        "upazilas": [
+          {"name": "Aditmari", "unions": []},
+          {"name": "Hatibandha", "unions": []},
+          {"name": "Kaliganj", "unions": []},
+          {"name": "Lalmonirhat Sadar", "unions": []},
+          {"name": "Patgram", "unions": []}
+        ]
+      },
+      {
+        "name": "Nilphamari",
+        "upazilas": [
+          {"name": "Dimla", "unions": []},
+          {"name": "Domar", "unions": []},
+          {"name": "Jaldhaka", "unions": []},
+          {"name": "Kishoreganj", "unions": []},
+          {"name": "Nilphamari Sadar", "unions": []},
+          {"name": "Saidpur", "unions": []}
+        ]
+      },
+      {
+        "name": "Panchagarh",
+        "upazilas": [
+          {"name": "Atwari", "unions": []},
+          {"name": "Boda", "unions": []},
+          {"name": "Debiganj", "unions": []},
+          {"name": "Panchagarh Sadar", "unions": []},
+          {"name": "Tetulia", "unions": []}
+        ]
+      },
+      {
+        "name": "Rangpur",
+        "upazilas": [
+          {"name": "Badarganj", "unions": []},
+          {"name": "Gangachara", "unions": []},
+          {"name": "Kaunia", "unions": []},
+          {"name": "Mithapukur", "unions": []},
+          {"name": "Pirgachha", "unions": []},
+          {"name": "Pirganj", "unions": []},
+          {"name": "Rangpur Sadar", "unions": []},
+          {"name": "Taraganj", "unions": []}
+        ]
+      },
+      {
+        "name": "Thakurgaon",
+        "upazilas": [
+          {"name": "Baliadangi", "unions": []},
+          {"name": "Haripur", "unions": []},
+          {"name": "Pirganj", "unions": []},
+          {"name": "Ranisankail", "unions": []},
+          {"name": "Thakurgaon Sadar", "unions": []}
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Sylhet",
+    "districts": [
+      {
+        "name": "Habiganj",
+        "upazilas": [
+          {"name": "Ajmiriganj", "unions": []},
+          {"name": "Bahubal", "unions": []},
+          {"name": "Baniachong", "unions": []},
+          {"name": "Chunarughat", "unions": []},
+          {"name": "Habiganj Sadar", "unions": []},
+          {"name": "Lakhai", "unions": []},
+          {"name": "Madhabpur", "unions": []},
+          {"name": "Nabiganj", "unions": []},
+          {"name": "Shayestaganj", "unions": []}
+        ]
+      },
+      {
+        "name": "Moulvibazar",
+        "upazilas": [
+          {"name": "Barlekha", "unions": []},
+          {"name": "Juri", "unions": []},
+          {"name": "Kamalganj", "unions": []},
+          {"name": "Kulaura", "unions": []},
+          {"name": "Moulvibazar Sadar", "unions": []},
+          {"name": "Rajnagar", "unions": []},
+          {"name": "Sreemangal", "unions": []}
+        ]
+      },
+      {
+        "name": "Sunamganj",
+        "upazilas": [
+          {"name": "Bishwambharpur", "unions": []},
+          {"name": "Chhatak", "unions": []},
+          {"name": "Derai", "unions": []},
+          {"name": "Dharmapasha", "unions": []},
+          {"name": "Dowarabazar", "unions": []},
+          {"name": "Jagannathpur", "unions": []},
+          {"name": "Jamalganj", "unions": []},
+          {"name": "Madhyanagar", "unions": []},
+          {"name": "Shalla", "unions": []},
+          {"name": "Shantiganj", "unions": []},
+          {"name": "Sunamganj Sadar", "unions": []},
+          {"name": "Tahirpur", "unions": []}
+        ]
+      },
+      {
+        "name": "Sylhet",
+        "upazilas": [
+          {"name": "Balaganj", "unions": []},
+          {"name": "Beanibazar", "unions": []},
+          {"name": "Bishwanath", "unions": []},
+          {"name": "Companiganj", "unions": []},
+          {"name": "Dakshin Surma", "unions": []},
+          {"name": "Fenchuganj", "unions": []},
+          {"name": "Golapganj", "unions": []},
+          {"name": "Gowainghat", "unions": []},
+          {"name": "Jaintiapur", "unions": []},
+          {"name": "Kanaighat", "unions": []},
+          {"name": "Osmaninagar", "unions": []},
+          {"name": "Sylhet Sadar", "unions": []},
+          {"name": "Zakiganj", "unions": []}
+        ]
+      }
+    ]
+  }
+]

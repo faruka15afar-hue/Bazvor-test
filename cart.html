@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width,initial-scale=1,viewport-fit=cover"
+  >
+
+  <title>BAZVOR — My Cart</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
+  <link rel="stylesheet" href="cart.css?v=50">
+  <link rel="stylesheet" href="bottom-nav.css">
+</head>
+
+<body>
+
+<div class="bazvor-cart-app">
+
+  <!-- ==========================================
+       HEADER
+  =========================================== -->
+
+  <header class="cart-header">
+
+    <button
+      id="backButton"
+      class="header-action"
+      type="button"
+      aria-label="Back"
+    >
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+
+    <div class="cart-header-center">
+      <h1>My Cart</h1>
+      <span id="cartCount">0 items</span>
+    </div>
+
+    <a
+      class="header-action"
+      href="wishlist.html"
+      aria-label="Wishlist"
+    >
+      <i class="fa-regular fa-heart"></i>
+    </a>
+
+  </header>
+
+
+  <!-- ==========================================
+       CART
+  =========================================== -->
+
+  <main class="cart-page">
+
+    <div
+      id="cartContent"
+      class="cart-layout"
+    >
+
+      <div class="cart-main-column">
+
+        <!-- SELECT -->
+
+        <section class="select-row">
+
+          <label class="select-all">
+
+            <input
+              id="selectAll"
+              type="checkbox"
+            >
+
+            <span class="main-checkbox"></span>
+
+            <span class="select-copy">
+              <strong>Select all</strong>
+              <small id="selectedCount">0 selected</small>
+            </span>
+
+          </label>
+
+
+          <button
+            id="deleteSelected"
+            class="delete-selected"
+            type="button"
+          >
+            <i class="fa-regular fa-trash-can"></i>
+            Delete
+          </button>
+
+        </section>
+
+
+        <!-- CART ITEMS -->
+
+        <section
+          id="cartItems"
+          class="cart-items"
+        ></section>
+
+
+        <!-- DELIVERY -->
+
+        <section class="service-card">
+
+          <span class="service-icon delivery-icon">
+            <i class="fa-solid fa-truck-fast"></i>
+          </span>
+
+          <span class="service-info">
+
+            <strong>Delivery</strong>
+
+            <span id="deliveryText">
+              Select products to calculate
+            </span>
+
+            <small id="deliveryEstimate">
+              Delivery charge appears here
+            </small>
+
+          </span>
+
+          <span class="service-arrow">
+            <i class="fa-solid fa-chevron-right"></i>
+          </span>
+
+        </section>
+
+
+        <!-- COUPON -->
+
+        <section class="coupon-card">
+
+          <button
+            id="couponTrigger"
+            class="coupon-trigger"
+            type="button"
+          >
+
+            <span class="service-icon coupon-icon">
+              <i class="fa-solid fa-ticket"></i>
+            </span>
+
+            <span class="service-info">
+
+              <strong>Apply Coupon</strong>
+
+              <span id="couponStatus">
+                Voucher or promo code
+              </span>
+
+            </span>
+
+            <span class="service-arrow">
+              <i class="fa-solid fa-chevron-down"></i>
+            </span>
+
+          </button>
+
+
+          <div
+            id="couponPanel"
+            class="coupon-panel"
+            hidden
+          >
+
+            <div class="coupon-input">
+
+              <input
+                id="couponInput"
+                type="text"
+                autocomplete="off"
+                placeholder="Enter coupon code"
+              >
+
+              <button
+                id="applyCoupon"
+                type="button"
+              >
+                Apply
+              </button>
+
+            </div>
+
+            <p id="couponMessage"></p>
+
+          </div>
+
+        </section>
+
+      </div>
+
+
+      <!-- ========================================
+           SUMMARY
+      ========================================= -->
+
+      <aside class="cart-summary-column">
+
+        <section class="summary">
+
+          <div class="summary-heading">
+
+            <div>
+              <small>PAYMENT DETAILS</small>
+              <h2>Order Summary</h2>
+            </div>
+
+            <span class="summary-icon">
+              <i class="fa-solid fa-bag-shopping"></i>
+            </span>
+
+          </div>
+
+
+          <div class="summary-row">
+
+            <span>
+              Subtotal
+              <small id="itemText">(0 items)</small>
+            </span>
+
+            <strong id="subtotal">
+              ৳0
+            </strong>
+
+          </div>
+
+
+          <div class="summary-row">
+
+            <span>
+              Product savings
+            </span>
+
+            <strong
+              id="productDiscount"
+              class="saving"
+            >
+              -৳0
+            </strong>
+
+          </div>
+
+
+          <div
+            id="couponSummaryRow"
+            class="summary-row"
+            hidden
+          >
+
+            <span>
+              Coupon discount
+            </span>
+
+            <strong
+              id="couponDiscountText"
+              class="saving"
+            >
+              -৳0
+            </strong>
+
+          </div>
+
+
+          <div class="summary-row">
+
+            <span>
+              Delivery
+            </span>
+
+            <strong id="delivery">
+              ৳0
+            </strong>
+
+          </div>
+
+
+          <div class="summary-divider"></div>
+
+
+          <div class="summary-total">
+
+            <span>
+              <strong>Total</strong>
+              <small>Payable amount</small>
+            </span>
+
+            <strong id="total">
+              ৳0
+            </strong>
+
+          </div>
+
+
+          <button
+            id="desktopCheckoutButton"
+            class="desktop-checkout"
+            type="button"
+          >
+            Checkout
+
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+
+        </section>
+
+      </aside>
+
+    </div>
+
+
+    <!-- EMPTY -->
+
+    <section
+      id="emptyCart"
+      class="empty-cart hidden"
+    >
+
+      <div class="empty-icon">
+        <i class="fa-solid fa-cart-shopping"></i>
+      </div>
+
+      <h2>Your cart is empty</h2>
+
+      <p>
+        Products you add to your cart will appear here.
+      </p>
+
+      <a href="home.html">
+        Start Shopping
+      </a>
+
+    </section>
+
+  </main>
+
+
+  <!-- ==========================================
+       CHECKOUT BAR
+  =========================================== -->
+
+  <div class="checkout-bar">
+
+    <div class="checkout-total">
+
+      <span>
+        Total
+      </span>
+
+      <strong id="bottomTotal">
+        ৳0
+      </strong>
+
+    </div>
+
+    <button
+      id="checkoutButton"
+      type="button"
+    >
+      Checkout
+    </button>
+
+  </div>
+
+
+  <!-- ==========================================
+       CHECKOUT DIM
+  =========================================== -->
+
+  <div
+    id="checkoutBackdrop"
+    class="checkout-backdrop"
+    hidden
+  ></div>
+
+
+  <!-- =====================================================
+       CHECKOUT SHEET
+  ====================================================== -->
+
+  <section
+    id="checkoutSheet"
+    class="checkout-sheet phone-size"
+    aria-hidden="true"
+  >
+
+    <!-- ==========================================
+         STEP 1 — PHONE
+    =========================================== -->
+
+    <section
+      id="phoneStep"
+      class="checkout-step active"
+    >
+
+      <header class="minimal-sheet-header">
+
+        <button
+          id="closePhoneCheckout"
+          class="minimal-back"
+          type="button"
+          aria-label="Back"
+        >
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+
+        <div>
+
+          <h2>
+            Add your phone number
+          </h2>
+
+          <p>
+            to continue checkout
+          </p>
+
+        </div>
+
+
+        <span></span>
+
+      </header>
+
+
+      <div class="sheet-divider"></div>
+
+
+      <div class="phone-content">
+
+        <p class="phone-message">
+          Please enter the phone number you want to use for your order.
+        </p>
+
+
+        <label class="phone-number-box">
+
+          <span class="bd-flag">
+            <span></span>
+          </span>
+
+
+          <span class="phone-prefix">
+            +880
+          </span>
+
+
+          <span class="phone-box-divider"></span>
+
+
+          <input
+            id="customerPhone"
+            type="tel"
+            inputmode="numeric"
+            autocomplete="tel"
+            maxlength="11"
+            placeholder="1XXX XXX XXXX"
+          >
+
+        </label>
+
+
+        <button
+          id="phoneContinue"
+          class="phone-continue"
+          type="button"
+          disabled
+        >
+          Continue
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         STEP 2 — LOCATION
+    =========================================== -->
+
+    <section
+      id="locationStep"
+      class="checkout-step"
+    >
+
+      <header class="simple-sheet-header">
+
+        <button
+          id="locationBack"
+          type="button"
+        >
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+
+        <div>
+          <h2>Delivery location</h2>
+          <p>Select your delivery address</p>
+        </div>
+
+
+        <button
+          id="locationClose"
+          type="button"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+
+      </header>
+
+
+      <div class="sheet-divider"></div>
+
+
+      <div class="details-scroll">
+
+
+        <!-- DIVISION -->
+
+        <div class="location-control">
+
+          <label for="divisionSelect">
+            Division
+          </label>
+
+          <select id="divisionSelect">
+
+            <option value="">
+              Select division
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <!-- DISTRICT -->
+
+        <div class="location-control">
+
+          <label for="districtSelect">
+            District
+          </label>
+
+          <select
+            id="districtSelect"
+            disabled
+          >
+
+            <option value="">
+              Select district
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <!-- UPAZILA -->
+
+        <div class="location-control">
+
+          <label for="upazilaSelect">
+            Upazila / Thana
+          </label>
+
+          <select
+            id="upazilaSelect"
+            disabled
+          >
+
+            <option value="">
+              Select upazila
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <!-- UNION -->
+
+        <div class="location-control">
+
+          <label for="unionSelect">
+            Union / Parishad
+          </label>
+
+          <select
+            id="unionSelect"
+            disabled
+          >
+
+            <option value="">
+              Select union
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <div
+          id="locationLoader"
+          class="location-loader"
+          hidden
+        >
+          Loading location...
+        </div>
+
+
+        <!-- RECEIVER -->
+
+        <div class="location-control">
+
+          <label for="receiverName">
+            Receiver Name
+          </label>
+
+          <input
+            id="receiverName"
+            type="text"
+            autocomplete="name"
+            placeholder="Full name"
+          >
+
+        </div>
+
+
+        <!-- DETAILS -->
+
+        <div class="location-control">
+
+          <label for="addressDetails">
+            Village / Road / House / Landmark
+          </label>
+
+          <textarea
+            id="addressDetails"
+            placeholder="Enter complete delivery details"
+          ></textarea>
+
+        </div>
+
+
+        <button
+          id="locationContinue"
+          class="sheet-primary-button"
+          type="button"
+        >
+          Continue
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         STEP 3 — PAYMENT METHOD
+    =========================================== -->
+
+    <section
+      id="methodStep"
+      class="checkout-step"
+    >
+
+      <header class="simple-sheet-header">
+
+        <button
+          id="methodBack"
+          type="button"
+        >
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+
+        <div>
+          <h2>Payment method</h2>
+          <p>Choose how you want to pay</p>
+        </div>
+
+
+        <button
+          id="methodClose"
+          type="button"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+
+      </header>
+
+
+      <div class="sheet-divider"></div>
+
+
+      <div class="details-scroll">
+
+
+        <!-- COD -->
+
+        <button
+          class="payment-option"
+          data-payment="cod"
+          type="button"
+        >
+
+          <span class="payment-icon cod">
+            <i class="fa-solid fa-money-bill-wave"></i>
+          </span>
+
+
+          <span class="payment-copy">
+
+            <strong>
+              Cash on Delivery
+            </strong>
+
+            <small>
+              Pay when your order arrives
+            </small>
+
+          </span>
+
+
+          <span class="payment-check">
+            <i class="fa-solid fa-check"></i>
+          </span>
+
+        </button>
+
+
+        <!-- BKASH -->
+
+        <button
+          class="payment-option"
+          data-payment="bkash"
+          type="button"
+        >
+
+          <span class="payment-icon logo">
+
+            <img
+              id="bkashLogo"
+              src=https://res.cloudinary.com/fxq8b9vn/image/upload/v1789664644/1701670291bKash-App-Logo-PNG.png
+              alt="bKash"
+            >
+
+          </span>
+
+
+          <span class="payment-copy">
+
+            <strong>
+              bKash
+            </strong>
+
+            <small>
+              Send Money
+            </small>
+
+          </span>
+
+
+          <span class="payment-check">
+            <i class="fa-solid fa-check"></i>
+          </span>
+
+        </button>
+
+
+        <!-- NAGAD -->
+
+        <button
+          class="payment-option"
+          data-payment="nagad"
+          type="button"
+        >
+
+          <span class="payment-icon logo">
+
+            <img
+              src="https://res.cloudinary.com/fxq8b9vn/image/upload/v1789761106/1789761074904.png"
+              alt="Nagad"
+            >
+
+          </span>
+
+
+          <span class="payment-copy">
+
+            <strong>
+              Nagad
+            </strong>
+
+            <small>
+              Send Money
+            </small>
+
+          </span>
+
+
+          <span class="payment-check">
+            <i class="fa-solid fa-check"></i>
+          </span>
+
+        </button>
+
+
+        <button
+          id="methodContinue"
+          class="sheet-primary-button"
+          type="button"
+          disabled
+        >
+          Continue
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         STEP 4 — PAYMENT / CONFIRM
+    =========================================== -->
+
+    <section
+      id="finalStep"
+      class="checkout-step"
+    >
+
+      <header class="simple-sheet-header">
+
+        <button
+          id="finalBack"
+          type="button"
+        >
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+
+        <div>
+
+          <h2 id="finalTitle">
+            Complete payment
+          </h2>
+
+          <p id="finalSubtitle">
+            Finish your order
+          </p>
+
+        </div>
+
+
+        <button
+          id="finalClose"
+          type="button"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+
+      </header>
+
+
+      <div class="sheet-divider"></div>
+
+
+      <div class="details-scroll">
+
+
+        <!-- ONLINE PAYMENT -->
+
+        <div id="manualPayment">
+
+          <div class="payment-card">
+
+            <div class="payment-card-top">
+
+              <span id="selectedPaymentName">
+                bKash
+              </span>
+
+              <small>
+                SEND MONEY
+              </small>
+
+            </div>
+
+
+            <span class="send-label">
+              Send payment to
+            </span>
+
+
+            <div class="send-number">
+
+              <strong id="paymentNumber">
+                01XXXXXXXXX
+              </strong>
+
+
+              <button
+                id="copyPaymentNumber"
+                type="button"
+              >
+                Copy
+              </button>
+
+            </div>
+
+
+            <div class="payment-line"></div>
+
+
+            <div class="payment-total">
+
+              <span>
+                Amount to send
+              </span>
+
+              <strong id="paymentAmount">
+                ৳0
+              </strong>
+
+            </div>
+
+          </div>
+
+
+          <div class="location-control transaction-field">
+
+            <label for="transactionId">
+              Transaction ID
+            </label>
+
+            <input
+              id="transactionId"
+              type="text"
+              maxlength="40"
+              autocomplete="off"
+              placeholder="Enter transaction ID"
+            >
+
+          </div>
+
+
+          <button
+            id="placePaidOrder"
+            class="sheet-primary-button pink-button"
+            type="button"
+            disabled
+          >
+            Place Order
+          </button>
+
+        </div>
+
+
+        <!-- COD -->
+
+        <div
+          id="codConfirmation"
+          class="cod-confirmation"
+          hidden
+        >
+
+          <div class="cod-mark">
+            <i class="fa-solid fa-money-bill-wave"></i>
+          </div>
+
+
+          <h3>
+            Cash on Delivery
+          </h3>
+
+
+          <p>
+            Pay when your order arrives. No advance payment is required.
+          </p>
+
+
+          <div class="cod-total">
+
+            <span>
+              Payable on delivery
+            </span>
+
+            <strong id="codAmount">
+              ৳0
+            </strong>
+
+          </div>
+
+
+          <button
+            id="placeCodOrder"
+            class="sheet-primary-button green-button"
+            type="button"
+          >
+            Confirm Order
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </section>
+
+
+  <!-- ==========================================
+       LOADING
+  =========================================== -->
+
+  <div
+    id="orderLoading"
+    class="order-loading"
+    hidden
+  >
+
+    <div>
+
+      <span class="loader"></span>
+
+      <strong>
+        Placing order
+      </strong>
+
+    </div>
+
+  </div>
+
+
+  <!-- TOAST -->
+
+  <div
+    id="toast"
+    class="toast"
+  ></div>
+
+</div>
+
+<script
+  type="module"
+  src="cart.js?v=51"
+></script>
+
+<script src="bottom-nav.js"></script>
+
+</body>
+
+</html>
